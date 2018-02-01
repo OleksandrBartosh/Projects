@@ -95,7 +95,6 @@ public class TransporterServiceImpl implements TransporterService{
 		offer.setLeftBy(1);
 		offer.setOfferStatus(OfferStatus.WAITING);
 			offerRepository.save(offer);
-		
 	}
 
 	@Override
@@ -115,7 +114,6 @@ public class TransporterServiceImpl implements TransporterService{
 
 	@Override
 	public Page<TransporterIndexView> findAll(TransporterFilter filter, Pageable pageable) {
-		//from viewRepository
 		return transporterViewRepository.findAll(filter, pageable);
 	}
 }

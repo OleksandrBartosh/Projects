@@ -29,7 +29,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	
 	@Query("SELECT new ua.model.view.CargoView(c.id, g.name, c.weight, c.height, c.width, c.length, cFrom.name, cTo.name, c.price, c.creationDate) FROM Cargo c JOIN c.goods g JOIN c.cityFrom cFrom JOIN c.cityTo cTo")
 	List<CargoView> findAllCargo();
-	//and status=! close
+
 	@Query("SELECT new ua.model.view.CargoView(c.id, g.name, c.weight, c.height, c.width, c.length, cFrom.name, cTo.name, c.price, c.creationDate) FROM Cargo c JOIN c.goods g JOIN c.cityFrom cFrom JOIN c.cityTo cTo JOIN c.transporter.user u WHERE u.email=?1") 
 	CargoView getCurrentCargo(String email);
 	

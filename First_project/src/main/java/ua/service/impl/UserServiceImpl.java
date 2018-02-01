@@ -45,7 +45,6 @@ public class UserServiceImpl implements UserService {
 		user.setEmail(request.getEmail());
 		user.setPassword(encoder.encode(request.getPassword()));
 		user.setRole(Role.ROLE_TRANSPORTER);
-		//
 		Transporter transporter = new Transporter();
 		transporter.setAge(Integer.valueOf(request.getAge()));
 		transporter.setCarAge(Integer.valueOf(request.getCarAge()));

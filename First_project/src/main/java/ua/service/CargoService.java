@@ -23,8 +23,6 @@ public interface CargoService {
 	
 	Page<CargoView> findAllView(Pageable pageable);
 	
-//	List<CargoView> findOwnerCargo(String email);
-	
 	Page<CargoView> findOwnerCargo(String email, Pageable pageable);
 	
 	CargoView findById(Integer id);
@@ -46,6 +44,6 @@ public interface CargoService {
 	List<TransporterIndexView> findAcceptTransporter(Integer id);
 	
 	List<TransporterIndexView> findInWayTransporter(Integer id);
-//
+
 	Page<CargoView> findAllView(CargoFilter cargoFilter, Pageable pageable);
 }

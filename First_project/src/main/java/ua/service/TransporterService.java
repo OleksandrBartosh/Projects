@@ -19,7 +19,6 @@ public interface TransporterService {
 	
 	Page<TransporterIndexView> findAllPage(Pageable pageable);
 	
-	//
 	Page<TransporterIndexView> findAll(TransporterFilter filter, Pageable pageable);
 	
 	TransporterView findById(Integer id);

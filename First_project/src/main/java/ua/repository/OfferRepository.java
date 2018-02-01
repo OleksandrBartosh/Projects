@@ -36,7 +36,7 @@ public interface OfferRepository extends JpaRepository<Offer, Integer>{
 	@Query("SELECT t FROM Transporter t WHERE t.id=?1")
 	Transporter getTransporter(Integer id_transporter);
 	
-	//offers to transporter from owners
+	//offers from owners
 	@Query("SELECT new ua.model.view.CargoView(c.id, g.name, c.weight, c.height, c.width, c.length, cFrom.name, cTo.name, c.price, c.creationDate) FROM Offer o JOIN o.transporter t JOIN o.cargo c JOIN t.user u JOIN c.goods g JOIN c.cityFrom cFrom JOIN c.cityTo cTo WHERE u.email=?1  AND o.offerStatus != ua.entity.OfferStatus.DECLINE")
 	List<CargoView> myOffers(String email);
 	
@@ -48,7 +48,6 @@ public interface OfferRepository extends JpaRepository<Offer, Integer>{
 	@Query("SELECT o FROM Offer o JOIN o.transporter.user u JOIN o.cargo c WHERE c.id=?1 AND u.email=?2")
 	Offer getCurrentOffer(Integer id_cargo, String email);
 	
-	//
 	@Query("SELECT o FROM Offer o JOIN o.transporter t WHERE t.id=?1 AND o.offerStatus != ua.entity.OfferStatus.ACCEPT")
 	List<Offer> offersToTransporter(Integer id);
 	

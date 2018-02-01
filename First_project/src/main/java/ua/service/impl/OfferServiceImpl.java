@@ -151,7 +151,6 @@ public class OfferServiceImpl implements OfferService {
 			Transporter transporter = repository.getTransporter(email);
 			transporter.setCount(transporter.getCount()+1);
 			transporter.setStatus(Status.IN_THE_WAY);
-			//set cargo
 			Cargo cargo = repository.getCargo(id_cargo);
 			cargo.setTransporter(transporter);
 			curoffer.setOfferStatus(OfferStatus.COMPLETE);
