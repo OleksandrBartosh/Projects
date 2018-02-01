@@ -1,0 +1,18 @@
+@charset "UTF-8";
+	.table-striped > tbody > tr:nth-child(n) > th {
+  		 background-color: #343a40!important;
+  		 color: #ffffff;
+  		 text-align: center;
+	}
+	.table{
+		margin-top: 20px;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+	.img{
+		width: 100%;
+	}
+	.top{
+		margin-top: 60px;
+	}

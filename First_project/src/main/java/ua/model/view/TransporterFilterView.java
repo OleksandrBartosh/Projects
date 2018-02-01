@@ -1,0 +1,87 @@
+package ua.model.view;
+
+import java.math.BigDecimal;
+
+public class TransporterFilterView {
+
+	private Integer id;
+	
+	private BigDecimal rate;
+	
+	private int maxWeight;
+	
+	private String photoUrl;
+	
+	private int version;
+	
+	private String name;
+	
+	private int count;
+
+	public TransporterFilterView(Integer id, BigDecimal rate, int maxWeight, String photoUrl, int version, String name,
+			int count) {
+		this.id = id;
+		this.rate = rate;
+		this.maxWeight = maxWeight;
+		this.photoUrl = photoUrl;
+		this.version = version;
+		this.name = name;
+		this.count = count;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public BigDecimal getRate() {
+		return rate;
+	}
+
+	public int getMaxWeight() {
+		return maxWeight;
+	}
+
+	public String getPhotoUrl() {
+		return photoUrl;
+	}
+
+	public int getVersion() {
+		return version;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setRate(BigDecimal rate) {
+		this.rate = rate;
+	}
+
+	public void setMaxWeight(int maxWeight) {
+		this.maxWeight = maxWeight;
+	}
+
+	public void setPhotoUrl(String photoUrl) {
+		this.photoUrl = photoUrl;
+	}
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+}
