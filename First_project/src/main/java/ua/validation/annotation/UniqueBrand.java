@@ -1,4 +1,4 @@
-package validation.annotation;
+package ua.validation.annotation;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import validation.validator.UniqueBrandValidator;
+import ua.validation.validator.UniqueBrandValidator;
 
 @Retention(RUNTIME)
 @Target(FIELD)

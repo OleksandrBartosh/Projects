@@ -1,4 +1,4 @@
-package validation.validator;
+package ua.validation.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -6,7 +6,7 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.stereotype.Component;
 
 import ua.repository.BrandRepository;
-import validation.annotation.UniqueBrand;
+import ua.validation.annotation.UniqueBrand;
 
 @Component
 public class UniqueBrandValidator implements ConstraintValidator<UniqueBrand, String>{

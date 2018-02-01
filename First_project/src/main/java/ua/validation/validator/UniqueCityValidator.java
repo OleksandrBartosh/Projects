@@ -1,24 +1,24 @@
-package validation.validator;
+package ua.validation.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.stereotype.Component;
 
-import ua.repository.GoodsRepository;
-import validation.annotation.UniqueGoods;
+import ua.repository.CityRepository;
+import ua.validation.annotation.UniqueCity;
 
 @Component
-public class UniqueGoodsValidator implements ConstraintValidator<UniqueGoods, String>{
-
-	private final GoodsRepository repository;
+public class UniqueCityValidator implements ConstraintValidator<UniqueCity, String>{
 	
-	public UniqueGoodsValidator(GoodsRepository repository) {
+	private final CityRepository repository;
+	
+	public UniqueCityValidator(CityRepository repository) {
 		this.repository = repository;
 	}
 
 	@Override
-	public void initialize(UniqueGoods arg0) {}
+	public void initialize(UniqueCity arg0) {}
 
 	@Override
 	public boolean isValid(String name, ConstraintValidatorContext context) {

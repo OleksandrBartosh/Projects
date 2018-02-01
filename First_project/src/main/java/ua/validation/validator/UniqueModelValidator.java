@@ -1,4 +1,4 @@
-package validation.validator;
+package ua.validation.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -6,7 +6,7 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.stereotype.Component;
 
 import ua.repository.ModelRepository;
-import validation.annotation.UniqueModel;
+import ua.validation.annotation.UniqueModel;
 
 @Component
 public class UniqueModelValidator implements ConstraintValidator<UniqueModel, String> {

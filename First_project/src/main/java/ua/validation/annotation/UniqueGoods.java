@@ -1,4 +1,4 @@
-package validation.annotation;
+package ua.validation.annotation;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
@@ -9,13 +9,13 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import validation.validator.UniqueModelValidator;
+import ua.validation.validator.UniqueGoodsValidator;
 
 @Retention(RUNTIME)
 @Target(FIELD)
-@Constraint(validatedBy=UniqueModelValidator.class)
-public @interface UniqueModel {
-
+@Constraint(validatedBy=UniqueGoodsValidator.class)
+public @interface UniqueGoods {
+	
 	String message() default "Not unique";
 	
 	Class<?>[] groups() default {};
